@@ -1,0 +1,228 @@
+/*font-family: 'Inter', sans-serif;
+
+
+back col #10012C 
+
+
+color #FFA01B
+
+*/
+
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    transition: ease;
+    transition-duration: 500ms;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+p{
+    line-height: 25px;
+}
+
+.text-white{
+    color: white;
+}
+
+.text-gold{
+    color: #FFA01B;
+}
+
+.text-black{
+    color: black;
+}
+
+.text-green{
+    color: limegreen;
+}
+
+
+header{
+    width: 100%;
+    height: auto;
+    background-color: #10012C;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+.header-layer-1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 20px;
+}
+
+.title-box{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+
+/*navbar*/
+
+nav{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 5%;
+    padding-block: 10px;
+}
+
+.nav-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 30px;
+}
+
+.nav-left ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-content: center;
+    list-style: none;
+    font-size: 1rem;
+}
+
+.nav-left ul li a:hover{
+    color: #FFA01B;
+    text-decoration:double;
+}
+
+.nav-right{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.nav-right a{
+    padding-inline: 15px;
+    padding-block: 7px;
+    border: 1px solid #FFA01B;
+    color: white;
+    border-radius: 33px;
+    font-size: 1rem;
+}
+
+.nav-right a:hover{
+    padding-inline: 15px;
+    padding-block: 7px;
+    border: 1px solid #FFA01B;
+    color: white;
+    background-color: #FFA01B;
+    border-radius: 33px;
+    font-size: 1rem;
+}
+
+
+/*caluclator*/
+
+.calculator-section{
+    background-color: #10012C;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-block: 70px;
+    padding-inline: 20px;
+}
+
+.calculator-left{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 33px;
+    box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.241);
+    gap: 20px;
+}
+
+.calculator-left:hover{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    border: 1px solid #FFA01B;
+    border-radius: 33px;
+    box-shadow: 0px 3px 15px #ffa01b4d;
+}
+
+
+
+.price-in-calculator{
+    padding-inline: 10px;
+    padding-block: 5px;
+    border: 1px solid transparent;
+    background-color: #FFA01B;
+    border-radius: 33px;
+    width: fit-content;
+}
+
+.calculator-left input{
+    padding: 10px;
+    border-radius: 33px;
+    font-size: 1rem;
+}
+
+.calculator-right{
+    width: 40%;
+    height: auto;
+    pad: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.calculator-right p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.calculator-left form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#submit{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: white;
+    border: 1px solid #FFA01B;
+    color: #10012C;
+}

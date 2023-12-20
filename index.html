@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinSell - Sell Crypto Best Price</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="respo.css">
+    <link rel="stylesheet" href="header-res.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="header-layer-1">
+            <nav>
+                <div class="nav-left">
+                    <img src="images/gold-coins-symbol-png.webp" height="40px" alt="">
+                    <ul>
+                        <li><a class="text-white" href="#">Home</a></li>
+                        <li><a class="text-white" href="live-market.html">Live Market</a></li>
+                        <li><a class="text-white" href="sell.html">Sell USDT</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <a class="text-gold" href="#">Sell Now</a>
+                </div>
+            </nav>
+
+            <div class="nav-2">
+                    <a id="page-now" class="text-white" href="#">Home</a>
+                    <a class="text-white not-now" href="live-market.html">Live Market</a>
+                    <a class="text-white not-now" href="sell.html">Sell USDT</a>
+            </div>
+
+            <div class="header-main">
+                <div class="header-main-left">
+                    <h1 class="text-white">Get Your <span class="text-gold">USDT</span> Settled In Your Bank</h1>
+                    <p class="text-white">Live USDT Market Price ₹ <span class="text-gold" id="usdt"></span></p>
+                    <a href="#" class="text-gold">Sell USDT at ₹ <span class="text-gold" id="usdt-selling-set-go">High</span></a>
+                </div>
+
+                <div class="header-main-right">
+                    <img src="images/poti.png" alt="">
+                </div>
+
+                
+            </div>
+        </div>
+    </header>
+
+
+    <div class="calculator-section">
+        <div class="calculator-left">
+            <h1 class="text-white">Calculate USDT Value on Our Price</h1>
+            <input id="usdt-input" type="number"  placeholder="Enter USDT" oninput="
+            coin_input = document.getElementById('usdt-input');
+            calco(coin_input);
+            ">
+            <div class="price-in-calculator">
+                <p>Tether (USDT) Special Price: ₹ <span id="usdt-selling-set-go-mini">00</span></p>
+            </div>
+            
+            <h2 class="text-white">You'll recieve ₹ <span id="answer-money">00</span></h2>
+        </div>
+        <div class="calculator-right">
+            <h2 class="text-gold">What is Tether?</h2>
+            <p class="text-white">Tether (USDT) is a type of cryptocurrency known as a stablecoin. Unlike most cryptocurrencies such as Bitcoin or Ethereum, which can experience significant price volatility, stablecoins are designed to maintain a stable value by pegging their value to another asset or a basket of assets.</p>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="live-handler.js"></script>
+<script src="scriptlive.js"></script>
+<script src="https://kit.fontawesome.com/1911cccf54.js" crossorigin="anonymous"></script>
+</html>

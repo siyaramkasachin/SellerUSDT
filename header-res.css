@@ -1,0 +1,43 @@
+.nav-2{
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    margin-block: 40px;
+}
+
+#page-now{
+    border: 0px solid transparent;
+    background-color: white;
+    border-radius: 33px;
+    padding: 5px;
+    color: black;
+    padding-inline: 7px;
+    box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.331);
+}
+
+
+.not-now{
+    border: 0px solid transparent;
+    background-color: #FFA01B;
+    border-radius: 33px;
+    padding: 5px;
+    color: #10012C;
+    padding-inline: 7px;
+    box-shadow: 0px 3px 15px #ffa01b4f;
+}
+
+@media screen and (max-width: 700px){
+    .nav-left ul{
+        display: none;
+    }
+
+    .nav-2{
+        display: flex;
+    }
+}

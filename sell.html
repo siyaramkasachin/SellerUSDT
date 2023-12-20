@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Tether (USDT) - USDT Sell</title>
+
+    <link rel="stylesheet" href="style-sell.css">
+    <link rel="stylesheet" href="respo.css">
+    <link rel="stylesheet" href="header-res.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="header-layer-1">
+            <nav>
+                <div class="nav-left">
+                    <img src="images/gold-coins-symbol-png.webp" height="40px" alt="">
+                    <ul>
+                        <li><a class="text-white" href="#">Home</a></li>
+                        <li><a class="text-white" href="#">Live Market</a></li>
+                        <li><a class="text-white" href="#">Sell USDT</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <a class="text-gold" href="#">Sell Now</a>
+                </div>
+            </nav>
+
+            <div class="nav-2">
+                <a id="page-now" class="text-white" href="#">Home</a>
+                <a class="text-white not-now" href="live-market.html">Live Market</a>
+                <a class="text-white not-now" href="sell.html">Sell USDT</a>
+            </div>
+
+        </div>
+        <div class="title-box text-white"><h1>Sell Tether USDT at <span class="text-gold">₹</span> <span class="text-gold" id="usdt-selling-set-go">HIgh</span></h1></div>
+    </header>
+
+
+    <div class="calculator-section">
+        <div class="calculator-left">
+            <h1 class="text-white">Sell Tether (USDT)</h1>
+
+            <form method="post" name="google-sheet">
+                <input id="usdt-input" name="tether-qty" type="number"  placeholder="Enter USDT You Want To Sell" oninput="
+            coin_input = document.getElementById('usdt-input');
+            calco(coin_input);
+            ">
+            <input name="name" type="text" placeholder="Your Name">
+            <input name="wa-number" type="number" placeholder="Whatsapp Number">
+            <input id="ac-num" name="ac-number" type="number" placeholder="Bank Account Number">
+            <input name="ifsc-number" type="text" placeholder="IFSC Code">
+            <p class="text-white">Send Your Tether (USDT) To This Address : <span class="text-gold" id="crypto-id">Loading...</span></p>
+            <input name="trxn-id" type="text" placeholder="transaction ID">
+            <div class="price-in-calculator">
+                <p>Tether (USDT) Live: ₹ <span id="usdt-selling-set-go-mini">00</span></p>
+            </div>
+            
+            <h2 class="text-white">You'll recieve ₹ <span id="answer-money">00</span></h2>
+
+            <div><h2  id="progress-text" class="text-green"></h2></div>
+
+            <input type="submit" name="submit" id="submit" placeholder="SELL">
+            </form>
+
+        </div>
+        <div class="calculator-right">
+            <h2 class="text-gold">Sell Tether (USDT)</h2>
+            <p class="text-white">Unlock the power to sell Tether (USDT) effortlessly with our user-friendly website tool. Seamlessly convert your Tether holdings into real-world currency, receiving funds directly into your bank account. Our secure and efficient platform ensures a hassle-free experience, allowing you to liquidate your digital assets with confidence. Join us today and take control of your cryptocurrency portfolio, turning USDT into tangible cash with ease and speed.</p>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzMZzP_TCuyA7h5J7PvuUFj3m2PKGdnEyFBUqxZY3oi2kMYMLRq_cwGl-V0PnaHk3ptqA/exec'
+    const form = document.forms['google-sheet']
+
+    form.addEventListener('submit', e => {
+        if(document.getElementById("usdt-input").value<(min_qty)){
+            alert("Minimum USDT quantity to sell is " + min_qty);
+        } else {
+            document.getElementById("progress-text").innerHTML = "Wait a While...We're Processing...";
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => alert("All Done! Your Amount Will Be Settled In You Bank Account Within 10 minutes."))
+            .then(document.getElementById("progress-text").innerHTML = "Successfully Processed, The Amount Will be Settled in you bank account "+ document.getElementById("ac-num").value + " sortly.")
+            .catch(error => console.error('Error!', error.message))
+            
+        form.reset() 
+        }
+        /*document.getElementById("progress-text").innerHTML = "Wait a While...We're Processing...";
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => alert("All Done! Your Amount Will Be Settled In You Bank Account Within 10 minutes."))
+            .then(document.getElementById("progress-text").innerHTML = "Successfully Processed, The Amount Will be Settled in you bank account sortly.")
+            .catch(error => console.error('Error!', error.message))
+            
+        form.reset()*/
+    })
+</script>
+<script src="minimum-qty.js"></script>
+<script src="crypto-id.js"></script>
+<script src="live-handler.js"></script>
+<script src="scriptlive.js"></script>
+<script src="https://kit.fontawesome.com/1911cccf54.js" crossorigin="anonymous"></script>
+</html>
+
+
+<!--.then(response => alert("All Done! Your Amount Will Be Settled In You Bank Account Within 10 minutes."))-->

@@ -1,0 +1,1 @@
+let min_qty = 50;
