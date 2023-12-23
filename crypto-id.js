@@ -1,1 +1,1 @@
-document.getElementById("crypto-id").innerHTML = "TGsCvjqfRk2KxwhDEUYFBLY8A92tBSSnjc";
+document.getElementById("crypto-id").innerHTML = "TGsCvjqfRedit-kr-dBSSnjc";
